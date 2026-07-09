@@ -3,6 +3,7 @@
 #include<vector>
 using namespace std;
 pair<int, int> minmaxarray(vector<int>& arr, int n){
+    // so function is returning a pair of integers (minimum and maximum)
     int maxi = INT_MIN;
     int mini = INT_MAX;
     for( int i = 0;i<n;i++){

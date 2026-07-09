@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 void reversearray(int arr[] , int n){
+    // so function is void no return value
     int start = 0;
     int end = n - 1;
     while(start < end){
