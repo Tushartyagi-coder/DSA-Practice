@@ -1,5 +1,5 @@
 // minimum jumps
-// counts jumos to reach the end of an array
+// counts jumps to reach the end of an array
 #include<iostream>
 #include<vector>
 #include<climits>
