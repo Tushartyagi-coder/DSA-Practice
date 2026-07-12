@@ -11,6 +11,7 @@ int largestsubarraysum(vector<int> &arr){
         maxsum = max(maxsum , currentsum);
     }
     return maxsum;
+    // return maxsum; in case of all negative numbers, the maximum sum will be the largest negative number.
 }
 int main(){
     int n;
