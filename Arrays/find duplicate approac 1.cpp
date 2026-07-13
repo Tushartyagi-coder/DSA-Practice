@@ -6,8 +6,8 @@ using namespace std;
 int findduplicate(vector<int>& arr){
     int n = arr.size();
     sort(arr.begin(), arr.end());
-    for(int i = 0; i < n - 1; i++){
-        if(arr[i] == arr[i + 1]){
+    for(int i = 0; i < n ; i++){
+        if((arr[i] ^ arr[i + 1]) == 0){
             return arr[i];
         }
     }
@@ -31,4 +31,5 @@ int main(){
     return 0;
 
 }
+
 // this approach has time complexity of O(nlogn) due to sorting and space complexity of O(1) if we sort in place.
