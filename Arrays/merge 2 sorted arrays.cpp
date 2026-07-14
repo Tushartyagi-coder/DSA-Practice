@@ -1,3 +1,4 @@
+// merge two sorted array with gap method;git add .
 #include<iostream>
 #include<vector>
 #include<cmath>
@@ -10,19 +11,19 @@ void mergetwosortedarray(vector<int> &arr1 , vector<int> &arr2){
         int left = 0 ;
         int right = gap;
         while( right < n1 + n2){
-            // both lies on arr1
+            // when both lies on arr1;
             if( left < n1 && right <n1){
                 if(arr1[left] > arr1[right]){
                     swap(arr1[left] , arr1[right]);
                 }
             }
-            // onr lies in arr
+            // whrn one lies in arr1 and second lies in arr2;
             else if( left < n1 && right >= n1){
                 if(arr1[left] > arr2[right - n1]){
                     swap(arr1[left] , arr2[right - n1]);
                 }
             } 
-            else{
+            else{ // when both lies in arr2;
                 if( arr2[left - n1] > arr2[right - n1])  swap( arr2[left - n1] , arr2[right - n1]);
             }
             right++;
@@ -36,6 +37,10 @@ void mergetwosortedarray(vector<int> &arr1 , vector<int> &arr2){
             arr1[n1 + i] = arr2[i];
         }
 }
+
+// time complexity =  O((n + m) log(n + m))
+// space complexity = O(1) no use of extra spaces;
+
 int main() {
     int n1, n2;
 
