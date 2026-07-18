@@ -1,5 +1,6 @@
 // next permutation
 // three step in place algorithm 
+// question 14 done lb sheet
 #include <bits/stdc++.h>
 using namespace std;
 void nextpermutations(vector<int> &nums){
