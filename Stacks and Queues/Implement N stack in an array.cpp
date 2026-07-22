@@ -1,4 +1,9 @@
+// Approach Name: N Stacks in a Single Array (Dynamic Slot Allocation)
+// Pattern Name: Free List / Memory Pool Pattern
+// SC = O( S + N );
+// TC = O(1);
 #include <bits/stdc++.h> 
+using namespace std;
 class NStack
 {
     int *arr;
@@ -59,3 +64,18 @@ public:
     }
     
 };
+int main(){
+       NStack ns(3, 6); // 3 stacks, 6 slots
+
+    ns.push(10, 1);
+    ns.push(20, 1);
+    ns.push(30, 2);
+    ns.push(40, 3);
+
+    cout << ns.pop(1) << endl; // 20
+    cout << ns.pop(1) << endl; // 10
+    cout << ns.pop(2) << endl; // 30
+    cout << ns.pop(3) << endl; // 40
+
+    return 0;
+}
