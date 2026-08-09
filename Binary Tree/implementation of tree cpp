@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+struct node{     // default no use of class because we are not using any private or public access specifier
+    int data;
+    struct node* left;
+    struct node* right;
+    // constructor
+    node ( int value){
+        data = value;
+        left = right = nullptr;
+    }
+};
+node* createtree( node* root){
+    int value;
+    cout << "Enter the data for the node: ";
+    cin >> value;
+    if( value == -1){  // base case
+        return nullptr;
+    }
+    root = new node(value);
+    cout << "Enter left child of " << value << ":\n";
+    root -> left = createtree(root -> left); // recursive call to left subtree
+    cout << "Enter right child of " << value << ":\n";
+    root -> right = createtree( root -> right);  // recursive call to right subtree
+    return root;
+}
+int main(){
+   
+    node* root = createtree(root);
+    return 0;
+   
+}
