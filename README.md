@@ -17,10 +17,10 @@ Self-driven CSE student building strong DSA fundamentals in C++ with the goal of
 
 | Topic | Status |
 |-------|--------|
-| Arrays | ⬜ |
-| Strings | ⬜ |
-| Stacks and Queues | ⬜|
-| Binary Trees | ⬜ |
+| Arrays | 🟨 |
+| Strings | 🟨 |
+| Stacks and Queues | 🟨|
+| Binary Trees | 🟨 |
 | Hashmaps | ⬜ |
 | Heaps    | ⬜ |
 | Tries    | ⬜ |
@@ -38,3 +38,26 @@ Self-driven CSE student building strong DSA fundamentals in C++ with the goal of
 ---
 
 ## Repo Structure
+The repository is organized topic-wise so that concepts and problems remain easy to navigate.
+
+DSA/
+│
+├── Arrays/
+├── Strings/
+├── LinkedList/
+├── Stack/
+├── Queue/
+├── Recursion/
+├── Backtracking/
+├── BinarySearch/
+├── Sorting/
+├── Hashing/
+├── BinaryTree/
+├── BST/
+├── Heap/
+├── Trie/
+├── Graph/
+├── Greedy/
+└── DynamicProgramming/
+
+Each topic contains implementations, practice problems, and solutions written in C++.
