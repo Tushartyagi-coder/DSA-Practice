@@ -31,7 +31,7 @@ Self-driven CSE student building strong DSA fundamentals in C++ with the goal of
 ---
 
 ## Platforms
-- **LeetCode** — [tushartyagi-coder](https://leetcode.com/tushartyagi-coder)
+- **LeetCode** — (https://leetcode.com/u/_TusharTyagi/)
 - **GeeksForGeeks** — Tushar Tyagi
 - **Code360 (Naukri)** — Tushar Tyagi
 
