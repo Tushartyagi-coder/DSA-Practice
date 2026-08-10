@@ -34,6 +34,7 @@ Self-driven CSE student building strong DSA fundamentals in C++ with the goal of
 - **LeetCode** — (https://leetcode.com/u/_TusharTyagi/)
 - **GeeksForGeeks** — https://www.geeksforgeeks.org/profile/tushar22rj59
 - **Codolio** — https://codolio.com/profile/tushar%20ex
+- **code360** — https://www.naukri.com/code360/profile/bc1c0b5a-f1a7-4c27-9cde-abf5d043f275
 
 ---
 
