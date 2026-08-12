@@ -18,6 +18,7 @@ Self-driven CSE student building strong DSA fundamentals in C++ with the goal of
 | Topic | Status |
 |-------|--------|
 | Arrays | 🟨 |
+| pointers | 🟨 |
 | Strings | 🟨 |
 | Stacks and Queues | 🟨|
 | Binary Trees | 🟨 |
