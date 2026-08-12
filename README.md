@@ -63,3 +63,4 @@ DSA/
 └── DynamicProgramming/
 
 Each topic contains implementations, practice problems, and solutions written in C++.
+for me consistency matters a lot with all transformation and the date when i locked is 12 of August 2026.
