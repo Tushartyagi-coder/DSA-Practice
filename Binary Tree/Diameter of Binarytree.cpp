@@ -14,7 +14,7 @@ pair<int,int> diametertofaster(node* root){
     if( root == nullptr){
         return {0,0}; // first value is height and second value is diameter
     }
-    pair<int,int>left = diametertofaster(root -> left);
+    pair<int,int>left =   diametertofaster(root -> left);
     pair<int,int> right = diametertofaster(root -> right);
     
     int option1 = left.first; // diameter of left subtree
@@ -24,16 +24,9 @@ pair<int,int> diametertofaster(node* root){
      ans.first = max({option1, option2 , option3}); // diameter
      ans.second =max(left.second, right.second) + 1; // height
      return ans;
-
-
+// tc O(n) and sc O(h) where h is the height of the tree.
 }
 int main() {
-    //        1
-    //       / \
-    //      2   3
-    //     / \
-    //    4   5
-
     node* root  = new node(1);
     root->left  = new node(2);
     root->right = new node(3);
