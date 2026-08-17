@@ -9,7 +9,7 @@ struct node{
     left = right = nullptr;
   }
 };
-// approached name = fastbalanced
+// approached name = fastbalanced;
 pair<bool , int> fastbalanced(node* root){
     if( root == nullptr){
         return{true , 0}; // first value is balanced or not and second value is height
