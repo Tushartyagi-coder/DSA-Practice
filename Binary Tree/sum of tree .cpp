@@ -30,8 +30,11 @@ pair<bool , int> sumoftreefast(node* root){
     else{
         return {false , 0};
     }
-    
 }
+// isSumTree:
+// Approach: Pair-based DFS
+ // TC: O(n) — har node ek baar visit
+ // SC: O(h) — h = height of tree, recursion stack
 int main(){
     node* root  = new node(26);
     root->left  = new node(10);
