@@ -15,9 +15,9 @@ int merge( vector<int> &arr,int left , int mid , int right){
             count += ( mid - i + 1);
         }
     }
-    while( i <= mid ) temp.push_back(arr[i++]);
+    while( i <= mid ) temp.push_back(arr[i++]);  
     while( j <= right ) temp.push_back(arr[j++]);
-    for( int k = left ; k <= right ; k++ ){
+    for( int k = left ; k <= right ; k++ ){  
         arr[k] = temp[k - left];
     }
     return count;
@@ -27,7 +27,7 @@ int mergesort(vector<int> &arr , int left , int right){
     if( left >= right) return 0;
      int mid = ( left + right) / 2;
     count = count + mergesort(arr , left , mid);
-    count = count + mergesort(arr , mid + 1 , right);
+    count = count + mergesort(arr , mid + 1 , right); 
     count = count + merge(arr , left , mid , right);
     return count;
 }
