@@ -38,6 +38,10 @@ vector<int> zigzagorder( node* root){
     }
     return answer;
 }
+ // feat: add zigzag level order traversal for binary tree
+// - Used BFS with direction flag (leftToRight) for zigzag ordering
+// - Per-level vector with index trick to avoid reversing
+// - Time: O(N), Space: O(N)
 int main(){
     node* root = new node(1);
     root->left = new node(2);
