@@ -22,7 +22,7 @@ pair<node* , int> temp = q.front();
         q.pop();
         node* frontnode = temp.first;
         int hd = temp.second;
-        if( topnodes.find(hd) == topnodes.end()){
+        if( topnodes.find(hd) == topnodes.end()){       // for bottom view we will not check this condition and we will update the value of the node at that horizontal distance and put all the values
             topnodes[hd] = frontnode -> data;
         }
         if( frontnode -> left){
