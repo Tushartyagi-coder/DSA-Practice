@@ -15,25 +15,26 @@ void createmapping(vector<int> & inorder , unordered_map<int , int> &nodetoindex
         nodetoindex[inorder[i]] = i;
     }
 }
-node* solve(vector<int> &inorder , vector<int> &postorder , int inorderstart , int inorderend , int &postindex , unordered_map<int , int> &nodetoindex , int n){
+node* solve(vector<int> &inorder , vector<int> &preorder , int inorderstart , int inorderend , int &preorderindex , unordered_map<int , int> &nodetoindex , int n){
     // base case
-    if( postindex < 0 || inorderstart > inorderend){
+    if( preorderindex >= n || inorderstart > inorderend){
         return nullptr;
     }
-    int element = postorder[postindex--];
+    int element = preorder[preorderindex++];
     node* root = new node(element);
     int position = nodetoindex[element];
     // recursive calls
-    root -> right = solve(inorder , postorder , position + 1 , inorderend , postindex , nodetoindex , n);
-    root -> left = solve(inorder , postorder , inorderstart , position - 1 , postindex , nodetoindex , n);
+      root -> left = solve(inorder , preorder , inorderstart , position - 1 , preorderindex , nodetoindex , n);
+    root -> right = solve(inorder , preorder , position + 1 , inorderend , preorderindex , nodetoindex , n);
+  
     return root;
 }
-node* buildtreeinorderpostorder(vector<int> inorder , vector<int> postorder){
+node* buildtreeinorderpreorder(vector<int> inorder , vector<int> preorder){
     int n = inorder.size();
-    int postindex = n-1;
+    int preorderindex = 0;
     unordered_map<int , int>nodetoindex;
     createmapping(inorder , nodetoindex , n);
-    node* ans = solve(inorder , postorder , 0 , n-1 , postindex , nodetoindex , n);
+    node* ans = solve(inorder , preorder , 0 , n-1 , preorderindex , nodetoindex , n);
     return ans;
 }
 void printLevelOrder(node* root){
@@ -58,13 +59,13 @@ void printLevelOrder(node* root){
     cout << endl;
 }
 // pattern name = DFS + level order traversal
-// approach name = construct a binary tree from inorder and postorder
+// approach name = construct a binary tree from inorder and preorder
 // sc = O(n) + O(h) = O(n)  // for vector and recursive stack space
 // tc = O(n)  // for traversing all the nodes
 int main(){
-    vector<int> inorder = {4, 8, 2, 5, 1,  6 , 3, 7};
-    vector<int> postorder = {8, 4, 5, 2, 6, 7, 3, 1};
-    node* root = buildtreeinorderpostorder(inorder , postorder);
+    vector<int> inorder = {3, 1, 4, 0, 5, 2};
+    vector<int> preorder = {0, 1, 3, 4, 2, 5};
+    node* root = buildtreeinorderpreorder(inorder , preorder);
     cout << "Level Order Traversal of the constructed tree: ";
     cout << endl;
     printLevelOrder(root);
